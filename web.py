@@ -11,5 +11,5 @@ def home():
 def run_bot():
     telegram_bot.start_polling()
 
-# важно: запускаем при импорте, чтобы работало под gunicorn
+# ВАЖНО: запускаем при импорте, чтобы работало под gunicorn
 threading.Thread(target=run_bot, daemon=True).start()
